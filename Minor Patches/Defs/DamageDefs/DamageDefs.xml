@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+  <DamageDef Name="Dart">
+    <defName>MP_Dart</defName>
+    <label>dart</label>
+    <workerClass>DamageWorker_Bite</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <hediff>Gunshot</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+  </DamageDef>
+
+  <DamageDef ParentName="Dart">
+    <defName>MP_SedativeDart</defName>
+    <label>sedative dart</label>
+    <additionalHediffs>
+      <li>
+        <hediff>MP_Sedative</hediff>
+        <severityPerDamageDealt>0.33</severityPerDamageDealt>
+		<victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  
+  <DamageDef ParentName="Dart">
+	<defName>SR_Sonic</defName>
+	<harmsHealth>true</harmsHealth>
+    <label>stun</label>
+	<hediff>SR_SonicShock</hediff>
+	<externalViolence>true</externalViolence>
+	<deathMessage>{0} has been stunned to death.</deathMessage>
+    <additionalHediffs>
+      <li>
+        <hediff>SR_SonicDesorientation</hediff>
+        <severityPerDamageDealt>0.06</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  
+  <DamageDef ParentName="Dart">
+    <defName>SR_StimDart</defName>
+    <label>stim dart</label>
+    <additionalHediffs>
+      <li>
+        <hediff>SR_OverStimmed</hediff>
+        <severityPerDamageDealt>0.23</severityPerDamageDealt>
+		<victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  
+  <DamageDef Name="Flame">
+    <defName>MP_Flame</defName>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <label>flame</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has burned to death.</deathMessage>
+    <hediff>Burn</hediff>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>10</defaultDamage>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <!--
+	<soundExplosion>Explosion_Flame</soundExplosion>
+	-->
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+  </DamageDef>
+  <!--
+  <DamageDef ParentName="StunBase">
+	<defName>Sonic</defName>
+	<harmsHealth>true</harmsHealth>
+	<label>stun</label>
+	<externalViolence>true</externalViolence>
+	<deathMessage>{0} has been stunned to death.</deathMessage>
+	<defaultDamage>20</defaultDamage>
+	<explosionCellMote>Mote_BlastDry</explosionCellMote>
+	<soundExplosion>Explosion_Stun</soundExplosion>
+	<combatLogRules>Damage_Stun</combatLogRules>
+	<additionalHediffs>
+      <li>
+        <hediff>SonicDesorientation</hediff>
+        <severityPerDamageDealt>0.3</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+	-->
+	
+</Defs>

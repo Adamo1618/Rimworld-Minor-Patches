@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicEye</defName>
+    <label>bionic eye</label>
+    <labelNoun>a bionic eye</labelNoun>
+    <spawnThingOnRemoved>BionicEye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.35</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicArm</defName>
+    <label>bionic arm</label>
+    <labelNoun>a bionic arm</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>12</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>BionicArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.35</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicLeg</defName>
+    <label>bionic leg</label>
+    <labelNoun>a bionic leg</labelNoun>
+    <spawnThingOnRemoved>BionicLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.35</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicSpine</defName>
+    <label>bionic spine</label>
+    <labelNoun>a bionic spine</labelNoun>
+    <spawnThingOnRemoved>BionicSpine</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+	  <partEfficiency>1.20</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicHeart</defName>
+    <label>bionic heart</label>
+    <labelNoun>a bionic heart</labelNoun>
+    <spawnThingOnRemoved>BionicHeart</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicStomach</defName>
+    <label>bionic stomach</label>
+    <labelNoun>a bionic stomach</labelNoun>
+    <spawnThingOnRemoved>BionicStomach</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>BionicEar</defName>
+    <label>bionic ear</label>
+    <labelNoun>a bionic ear</labelNoun>
+    <spawnThingOnRemoved>BionicEar</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.35</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechEye</defName>
+    <label>archotech eye</label>
+    <labelNoun>an archotech eye</labelNoun>
+    <spawnThingOnRemoved>ArchotechEye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.60</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechArm</defName>
+    <label>archotech arm</label>
+    <labelNoun>an archotech arm</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>14</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>ArchotechArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.60</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>ArchotechLeg</defName>
+    <label>archotech leg</label>
+    <labelNoun>an archotech leg</labelNoun>
+    <spawnThingOnRemoved>ArchotechLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.60</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  
+  </Defs>

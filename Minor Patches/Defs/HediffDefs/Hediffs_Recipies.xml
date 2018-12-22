@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSuprathyroidGland</defName>
+    <label>install suprathyroid gland</label>
+    <description>Install suprathyroid gland.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing suprathyroid gland.</jobString>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_SuprathyroidGland</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_SuprathyroidGland</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_SuprathyroidGland</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallMuscleAugmentatons</defName>
+    <label>install muscle augmentations</label>
+    <description>Install muscle augmentations.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing muscle augmentations.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_MuscleAugmentatons</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_MuscleAugmentatons</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_MuscleAugmentatons</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallOrthoskin</defName>
+    <label>install orthoskin</label>
+    <description>Install orthoskin.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing orthoskin.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_Orthoskin</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_Orthoskin</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_Orthoskin</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSynapticBooster</defName>
+    <label>install synaptic booster</label>
+    <description>Install synaptic booster.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing synaptic booster.</jobString>
+    <workAmount>5000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_SynapticBooster</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_SynapticBooster</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_SynapticBooster</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallPlateletFactories</defName>
+    <label>install platelet factories</label>
+    <description>Install platelet factories.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing platelet factories.</jobString>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_PlateletFactories</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_PlateletFactories</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Spine</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_PlateletFactories</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallToxinExtractor</defName>
+    <label>install toxin extractor</label>
+    <description>Install toxin extractor.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing toxin extractor.</jobString>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_ToxinExtractor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_ToxinExtractor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Liver</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_ToxinExtractor</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallCortexBooster</defName>
+    <label>install cortex booster</label>
+    <description>Install cortex booster.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing cortex booster.</jobString>
+    <workAmount>5000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_CortexBooster</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_CortexBooster</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_CortexBooster</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallRadarSensor</defName>
+    <label>install radar sensor</label>
+    <description>Install radar sensor.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing radar sensor.</jobString>
+    <workAmount>4000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_RadarSensor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_RadarSensor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_RadarSensor</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSynch</defName>
+    <label>install synch</label>
+    <description>Install synch.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing synch.</jobString>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_Synch</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_Synch</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_Synch</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallStrikingCallus</defName>
+    <label>install striking callus</label>
+    <description>Install striking callus.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing striking callus.</jobString>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SR_StrikingCallus</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SR_StrikingCallus</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SR_StrikingCallus</addsHediff>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSocialEnhancer</defName>
+    <label>install social enhancer</label>
+    <description>Install social enhancer.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing social enhancer.</jobString>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MP_SocialEnhancer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>MP_SocialEnhancer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MP_SocialEnhancer</addsHediff>
+  </RecipeDef>
+  
+  <!--
+  
+ <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBodyAugmentations</defName>
+    <label>install body augmentations</label>
+    <description>Install body augmentations.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing body augmentations.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BodyAugmentations</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BodyAugmentations</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BodyAugmentations</addsHediff>
+  </RecipeDef>
+  
+    <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallMentalAugmentations</defName>
+    <label>install mental augmentations</label>
+    <description>Install mental augmentations.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing mental augmentations.</jobString>
+    <workAmount>8000</workAmount>
+    <skillRequirements>
+      <Medicine>14</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MentalAugmentations</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>MentalAugmentations</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>MentalAugmentations</addsHediff>
+  </RecipeDef>
+  -->
+  
+  </Defs>

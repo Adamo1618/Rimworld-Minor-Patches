@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ====================================== Augmentations =========================================== -->
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_SuprathyroidGland</defName>
+    <label>suprathyroid gland</label>
+    <labelNoun>a suprathyroid gland</labelNoun>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.20</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.10</offset>
+				</li>
+			</capMods>
+			<statOffsets>
+				<HungerRateMultiplier>0.80</HungerRateMultiplier>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_SuprathyroidGland</spawnThingOnRemoved>
+  </HediffDef>
+	
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_MuscleAugmentatons</defName>
+	<hediffClass>HediffWithComps</hediffClass>
+    <label>muscle augmentations</label>
+    <labelNoun>muscle augmentations</labelNoun>
+	<comps>
+	  <li Class="JecsTools.HediffCompProperties_ExtraMeleeDamages">
+	    <extraDamages>
+		  <li>
+		    <def>Blunt</def>
+		    <amount>32</amount>
+			<armorPenetration>0.8</armorPenetration>
+		  </li>
+		</extraDamages>
+      </li>
+	</comps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.40</offset>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.40</offset>
+				</li>
+			</capMods>
+			<statOffsets>
+				<MeleeHitChance>4</MeleeHitChance>
+				<ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_MuscleAugmentatons</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <hediffClass>HediffWithComps</hediffClass>
+    <defName>SR_Orthoskin</defName>
+    <label>orthoskin</label>
+    <labelNoun>orthoskin</labelNoun>
+	<!--
+	<comps>
+	  <li Class="JecsTools.HediffCompProperties_DamageSoak">
+	    <damageToSoak>6</damageToSoak>
+      </li>
+	</comps>
+	-->
+	<stages>
+	  <li>
+		<statOffsets>
+		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.2</ArmorRating_Heat>
+		</statOffsets>
+	  </li>	 
+    </stages>
+	<spawnThingOnRemoved>SR_Orthoskin</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_SynapticBooster</defName>
+    <label>synaptic booster</label>
+    <labelNoun>a synaptic booster</labelNoun>
+	<stages>
+		<li>
+			<statOffsets>
+				<MeleeDodgeChance>35</MeleeDodgeChance>
+				<RangedShieldBlockChance>25</RangedShieldBlockChance>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_SynapticBooster</spawnThingOnRemoved>
+  </HediffDef>
+	
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_PlateletFactories</defName>
+    <label>platelet factories</label>
+    <labelNoun>a set of platelet factories</labelNoun>
+	<stages>
+		<li>
+			<statOffsets>
+				<BleedRate>-0.50</BleedRate>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_PlateletFactories</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_ToxinExtractor</defName>
+    <label>toxin extractor</label>
+    <labelNoun>a toxin extractor</labelNoun>
+	<stages>
+		<li>
+			<statOffsets>
+				<ToxicSensitivity>-0.20</ToxicSensitivity>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_ToxinExtractor</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_CortexBooster</defName>
+    <label>cortex booster</label>
+    <labelNoun>a cortex booster</labelNoun>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.10</offset>
+				</li>
+			</capMods>
+			<statOffsets>
+				<GlobalLearningFactor>0.75</GlobalLearningFactor>
+				<ResearchSpeed>0.35</ResearchSpeed>
+			</statOffsets>
+			<painFactor>0.5</painFactor>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_CortexBooster</spawnThingOnRemoved>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_RadarSensor</defName>
+    <label>radar sensor</label>
+    <labelNoun>a radar sensor</labelNoun>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.45</offset>
+				</li>
+			</capMods>
+			<statOffsets>
+				<AimingDelayFactor>-0.2</AimingDelayFactor>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_RadarSensor</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>SR_Synch</defName>
+    <label>synch</label>
+    <labelNoun>a synch treatment</labelNoun>
+	<stages>
+		<li>
+			<statOffsets>
+				<AimingDelayFactor>-0.4</AimingDelayFactor>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>SR_Synch</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SR_StrikingCallus</defName>
+    <label>striking callus</label>
+    <labelNoun>a striking callus</labelNoun>
+    <comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>40</power>
+					<cooldownTime>1.10</cooldownTime>
+				</li>
+			</tools>
+		</li>
+	</comps>
+    <addedPartProps>
+      <solid>true</solid>
+    </addedPartProps>
+	<spawnThingOnRemoved>SR_StrikingCallus</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>MP_SocialEnhancer</defName>
+    <label>social enhancer</label>
+    <labelNoun>a social enhancer</labelNoun>
+	<stages>
+		<li>
+			<statOffsets>
+				<ArrestPeacefullyChance>0.15</ArrestPeacefullyChance>
+				<SocialImpact>0.20</SocialImpact>
+				<NegotiationAbility>0.25</NegotiationAbility>
+				<TradePriceImprovement>0.25</TradePriceImprovement>
+			</statOffsets>
+		</li>
+	</stages>
+	<spawnThingOnRemoved>MP_SocialEnhancer</spawnThingOnRemoved>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>MP_ImplantedGun</defName>
+    <label>implanted gun</label>
+    <labelNoun>an implanted gun</labelNoun>
+	<comps>
+      <li Class="HediffCompProperties_VerbGiver">
+		<verbs>
+		  <li>
+			<verbClass>Verb_LaunchProjectile</verbClass>
+			<label>Test</label>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_ChargeRifle</defaultProjectile>
+			<warmupTime>1.0</warmupTime>
+			<range>29.0</range>
+			<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+			<burstShotCount>3</burstShotCount>
+			<soundCast>Shot_ChargeRifle</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<isPrimary>true</isPrimary>
+		  </li>
+		</verbs>
+	  </li>
+	</comps>
+  </HediffDef>
+  
+  </Defs>

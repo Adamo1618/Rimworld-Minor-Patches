@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <TraitDef>
+    <defName>SR_Olaf</defName>
+	<commonality>0.001</commonality>
+    <degreeDatas>
+      <li>
+        <label>olaf</label>
+        <description>The Bearded Avenger.</description>
+        <statOffsets>
+          <GlobalLearningFactor>0.75</GlobalLearningFactor>
+          <ArrestPeacefullyChance>0.40</ArrestPeacefullyChance>
+		  <PainShockThreshold>0.10</PainShockThreshold>
+		  <MentalBreakThreshold>-0.13</MentalBreakThreshold>
+        </statOffsets>
+		<marketValueFactorOffset>0.8</marketValueFactorOffset>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Nerves</li>
+	  <li>Wimp</li>
+	  <li>BodyPurist</li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+	  <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>
+  
+<TraitDef>
+    <defName>MP_Intimidating</defName>
+    <degreeDatas>
+      <li>
+        <label>intimidating</label>
+        <description>[PAWN_nameDef] has a chilling demeanor. People tend to think twice before messing with [PAWN_objective].</description>
+		<socialFightChanceFactor>0.25</socialFightChanceFactor>
+        <statOffsets>
+          <ArrestPeacefullyChance>0.40</ArrestPeacefullyChance>
+		  <TameAnimalChance>0.20</TameAnimalChance>
+		  <SocialImpact>0.10</SocialImpact>
+		  <NegotiationAbility>0.10</NegotiationAbility>
+		  <TradePriceImprovement>0.20</TradePriceImprovement>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+    <!--
+  
+  <ThoughtDef>
+		<defName>KnowGuestOrganHarvested</defName>
+		<durationDays>7.5</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>someone's organ harvested</label>
+				<description>The colony took body parts from a guest or prisoner. It's horrible, breaking someone down for parts when they have no choice.</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	-->
+</Defs>

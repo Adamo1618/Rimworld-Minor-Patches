@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Minor patches</name>
+  <author>Mr. Adamo</author>
+  <targetVersion>1.0.0</targetVersion>
+  <description>[WIP] Fixes a few minor issues.
+  
+  Current additions:
+  Increased range for the Charge Rifle.
+  Vodka.
+  Bleedrate framework, shamelessly stolen from the mod Variable Bleed Rate Framework by ilikegoodfood.
+  Donald Trump hair.
+  Adam Jensen hair.
+  Orbital traders are much more frequent.
+  The trait Intimidating.
+  The implant Social enhancer, which improves almost all social aspects of the character slightly.
+  Some things are renamed for shits and giggles.
+  
+  Shadowrun related:
+  An automatic Gauss Rifle, powerful midrange weapon.
+  A trait called Olaf.
+  Mist Armor.
+  Several augmentations, including:
+	Striking Callus, which improves unarmed attacks
+	Body Augmentations, increases a range of stats and capacities.
+	Mental Augmentations, same as above.
+	  
+  </description>
+</ModMetaData>

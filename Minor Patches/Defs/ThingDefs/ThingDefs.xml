@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ====================================== Drugs =========================================== -->
+
+<ThingDef ParentName="DrugBase">
+    <defName>MP_Vodka</defName>
+    <label>vodka</label>
+    <description>The cornerstone in every Slav civilization. Great for team exercises. Side effects include getting drunk.</description>
+    <graphicData>
+      <texPath>Drugs/Vodka</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>12</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.08</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.27</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.35</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <severity>0.026</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+      </outcomeDoers>
+    </ingestible>
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.017</addictiveness>
+        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>1100</listOrder>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>bottle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>neck</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  
+<!-- ====================================== Weapons =========================================== -->
+
+<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_ChargeRifle</defName>
+    <label>charge rifle</label>
+    <description>A charged-shot assault rifle. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.74</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChargeRifle</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>29.0</range>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>MP_Gun_TranqRifle</defName>
+    <label>tranq rifle</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.94</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Shadowrun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MP_Bullet_TranqRifle</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>24.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MP_Bullet_TranqRifle</defName>
+    <label>tranq dart</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>MP_SedativeDart</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+	  <armorPenetrationBase>0.25</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+    <ThingDef ParentName="BaseHumanGun">
+    <defName>SR_Gun_StimRifle</defName>
+    <label>tranq rifle</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.94</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Shadowrun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>SR_Bullet_StimRifle</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>24.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+    <defName>SR_Bullet_StimRifle</defName>
+    <label>stim dart</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>SR_StimDart</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+	  <armorPenetrationBase>0.25</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>SR_Gun_SonicRifle</defName>
+    <label>sonic rifle</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.94</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Shadowrun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>SR_Bullet_SonicRifle</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>24.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>SR_Bullet_SonicRifle</defName>
+    <label>sound wavelet</label>
+    <graphicData>
+      <texPath>Projectiles/Soundwave</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>SR_Sonic</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+	  <armorPenetrationBase>1.00</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseGun">
+    <defName>SR_Gun_GaussRifle</defName>
+    <label>gauss rifle</label>
+    <description>A magnetically powered assault rifle. By many considered the ultimate development of the slug thrower, this weapons accelerates projectiles to several times the speed of sound.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Weapons/Gaussrifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4.6</Mass>
+	  <DeteriorationRate>0.4</DeteriorationRate>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.92</AccuracyShort>
+      <AccuracyMedium>0.82</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.50</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Shadowrun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>SR_Bullet_GaussRifle</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>32.0</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>4</burstShotCount>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>SR_Bullet_GaussRifle</defName>
+    <label>gauss shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>17</damageAmountBase>
+      <armorPenetrationBase>0.45</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>SR_Bullet_Flamethrower</defName>
+    <label>flamethrower flame</label>
+    <graphicData>
+      <texPath>Projectiles/Flame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <speed>45</speed>
+      <explosionRadius>1.5</explosionRadius >
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.27</preExplosionSpawnChance>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>SR_Gun_Flamehrower</defName>
+    <label>flamethrower</label>
+    <description>Hideous fire hazard. Truly brings out the pyromaniac in all of us.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4.6</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.74</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <weaponTags>
+      <li>Shadowrun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>SR_Bullet_Flamethrower</defaultProjectile>
+        <forcedMissRadius>2.0</forcedMissRadius>
+        <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+        <warmupTime>1.25</warmupTime>
+        <range>16.9</range>
+		<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MP_TestThingy</defName>
+    <label>test thingy</label>
+	<thingClass>ThingWithComps</thingClass>
+    <techLevel>Archotech</techLevel>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <statBases>
+      <Mass>0.5</Mass>
+	  <MarketValue>650</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+	</statBases>
+    <description>A one-use psychic effector. It overwhelms the target's mind with terrifying perceptual distortions, driving him into a berserk state. There is a risk of brain damage. It works at long distances, and through walls.</description>
+    <graphicData>
+      <texPath>Things/Item/Artifact/PsychicInsanityLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Activate</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_Artifact</compClass>
+      </li>
+      <li Class="CompProperties_Targetable">
+        <compClass>CompTargetable_SinglePawn</compClass>
+        <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+      </li>
+      <li>
+        <compClass>CompTargetEffect_Berserk</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+  <!-- ====================================== Armor =========================================== -->
+  
+  
+    <ThingDef ParentName="ApparelBase">
+    <defName>SR_Apparel_MistArmorHelmet</defName>
+    <label>mist helmet</label>
+    <description>A mist armor helmet, with a built-in status computer and layered plasteel-weave plates.\n\nArmor like this is often used by imperial janissaries and rapid-incursion space marines.</description>
+    <techLevel>Spacer</techLevel>
+	<thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Apparel/MistHelmet_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>0</generateCommonality>
+    <statBases>
+      <WorkToMake>21000</WorkToMake>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Mass>2.7</Mass>
+	  <DeteriorationRate>0.4</DeteriorationRate>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.0</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+	  <ToxicSensitivity>-0.20</ToxicSensitivity>
+    </equippedStatOffsets>
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Plasteel>40</Plasteel>
+    </costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Apparel/MistHelmet</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+        <li>Shadowrun</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(1,1,1,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelBase">
+    <defName>SR_Apparel_MistArmor</defName>
+    <label>mist armor</label>
+    <description>A suit of light powered armor. Layered plasteel-weave plates are very effective at stopping attacks, with few vulnerable joint sections. Neuro-memetic assistors allow a human to wear the armor and still move easily.\n\nArmor like this is often used by imperial janissaries and rapid-incursion space marines.</description>
+	<techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Apparel/MistArmor_Hulk_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>0.001</generateCommonality>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>540</MaxHitPoints>
+      <Mass>15</Mass>
+	  <DeteriorationRate>0.4</DeteriorationRate>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>1.18</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.84</ArmorRating_Heat>
+      <Insulation_Cold>34</Insulation_Cold>
+      <Insulation_Heat>34</Insulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Uranium>20</Uranium>
+    </costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Apparel/MistArmor</wornGraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+		<tags>
+        <li>Shadowrun</li>
+		</tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+	<!--
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+      </options>
+    </colorGenerator>
+	-->
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  
+  
+  <!-- ====================================== Body parts =========================================== -->
+  
+    <ThingDef ParentName="BodyPartBionicBase">
+    <defName>SR_StrikingCallus</defName>
+    <label>striking callus</label>
+    <description>Improved knuckles.</description>
+    <techLevel>Spacer</techLevel>
+    <costList> 
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>1600</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>0.3</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_SuprathyroidGland</defName>
+    <label>suprathyroid gland</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>2600</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_MuscleAugmentatons</defName>
+    <label>muscle augmentations</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>2600</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>6</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_Orthoskin</defName>
+    <label>orthoskin</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>2600</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_SynapticBooster</defName>
+    <label>synaptic booster</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>1800</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_PlateletFactories</defName>
+    <label>platelet factories</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>1000</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_ToxinExtractor</defName>
+    <label>toxin extractor</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>800</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_CortexBooster</defName>
+    <label>cortex booster</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>2100</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>0.7</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+ 
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_RadarSensor</defName>
+    <label>radar sensor</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>2000</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>SR_Synch</defName>
+    <label>synch</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>1000</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>0.2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+		<defName>MP_SocialEnhancer</defName>
+		<label>social enhancer</label>
+		<description>Advanced piece of technology made to analyze subtle body language and releases tailored pheromones, substantially increasing the user's social prowess.</description>
+		<techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+	  <MarketValue>1600</MarketValue>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>0.5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>DeusEx</li>
+    </techHediffsTags>
+	</ThingDef>
+  <!--
+    <ThingDef ParentName="ImplantBase">
+    <defName>MentalAugmentations</defName>
+    <label>mental augmentations</label>
+    <description>A collection of powerful mental augmentations.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ImplantBase">
+    <defName>BodyAugmentations</defName>
+    <label>body augmentations</label>
+    <description>A collection of cutting edge physical augmentations.</description>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Shadowrun</li>
+    </techHediffsTags>
+  </ThingDef>
+  -->
+  </Defs>

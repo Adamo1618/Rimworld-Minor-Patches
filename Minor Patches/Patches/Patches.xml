@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+<Operation Class="PatchOperationReplace">
+    <xpath>*/MentalStateDef[defName="Manhunter"]/beginLetter</xpath>
+    <value>
+        <beginLetter>{0} has become 200% mad!</beginLetter>
+    </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+    <xpath>*/MentalStateDef[defName="Manhunter"]/baseInspectLine</xpath>
+    <value>
+        <baseInspectLine>200% mad</baseInspectLine>
+    </value>
+</Operation>
+
+
+ 
+<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/StorytellerDef[defName = "Cassandra"]/comps//li[incident="OrbitalTraderArrival"]</xpath>
+	  <value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+			<incident>OrbitalTraderArrival</incident>
+			<onDays>9</onDays>
+			<offDays>2</offDays>
+			<numIncidentsRange>3</numIncidentsRange>
+			</li>
+	  </value>
+	</Operation>
+
+<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/StorytellerDef[defName = "Phoebe"]/comps//li[incident="OrbitalTraderArrival"]</xpath>
+	  <value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+			<incident>OrbitalTraderArrival</incident>
+			<onDays>9</onDays>
+			<offDays>2</offDays>
+			<numIncidentsRange>3</numIncidentsRange>
+			</li>
+	  </value>
+	</Operation>
+
+<Operation Class="PatchOperationAdd">
+	  <xpath>/Defs/StorytellerDef[defName = "Randy"]/comps</xpath>
+	  <value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+			<incident>OrbitalTraderArrival</incident>
+			<onDays>9</onDays>
+			<offDays>2</offDays>
+			<numIncidentsRange>3</numIncidentsRange>
+			</li>
+	</value>
+	</Operation>
+
+		<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/StorytellerDef[defName = "Lovecraft"]/comps//li[incident="OrbitalTraderArrival"]</xpath>
+	  <value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+			<incident>OrbitalTraderArrival</incident>
+			<onDays>9</onDays>
+			<offDays>2</offDays>
+			<numIncidentsRange>3</numIncidentsRange>
+			</li>
+	  </value>
+	</Operation>
+		
+	
+<!--
+
+  <Operation Class="PatchOperationInsert">
+    <xpath>/Defs/Smokeleaf[defName = "SmokeleafJoint"]</xpath>
+  	  <value>
+          <stackLimit>420</stackLimit>
+  	  </value>
+  	</Operation>
+-->
+	
+</Patch>

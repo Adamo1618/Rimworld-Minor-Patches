@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--
+<SongDef>
+		<clipPath>Rimmas</clipPath>
+		<volume>0.6</volume>
+		<commonality>3.0</commonality>
+		<allowedSeasons>
+			<li>Winter</li>
+		</allowedSeasons>
+	</SongDef>
+<SongDef>
+		<clipPath>Serenenight</clipPath>
+		<volume>0.6</volume>
+		<allowedTimeOfDay>Night</allowedTimeOfDay>
+	</SongDef>
+<SongDef>
+		<clipPath>Rimraid</clipPath>
+		<volume>0.8</volume>
+		<tense>true</tense>
+	</SongDef>
+-->
+
+  <!--
+  <comps>
+      <li Class="JecsTools.HediffCompProperties_Knockback">
+        <knockbackChance>0.8</knockbackChance>
+		<stunChance>0.2</stunChance>
+		<stunTicks>60</stunTicks>
+		<knockDistance>
+		  <min>2</min>
+		  <max>3</max>
+		</knockDistance>
+		<explosiveKnockback>true</explosiveKnockback>
+		<explosionDmg>Cults_BlackEMP</explosionDmg>
+      </li>
+      <li Class="JecsTools.HediffCompProperties_ExtraMeleeDamages">
+	    <extraDamages>
+		  <li>
+		    <def>Cults_AcidBurn</def>
+		    <amount>6</amount>
+		  </li>
+		</extraDamages>
+      </li>
+      <li Class="JecsTools.HediffCompProperties_DamageSoak">
+        <damageToSoak>3</damageToSoak>
+      </li>
+	  <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>900000</min>
+          <max>900000</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>	
+    <HediffDef ParentName="ImplantHediffBase">
+    <defName>MentalAugmentations</defName>
+    <label>mental augmentations</label>
+    <labelNoun>several mental augmentations</labelNoun>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.35</offset>
+				</li>
+			</capMods>
+			<statOffsets>
+				<GlobalLearningFactor>0.75</GlobalLearningFactor>
+				<ResearchSpeed>0.35</ResearchSpeed>
+				<AimingDelayFactor>-0.5</AimingDelayFactor>
+			</statOffsets>
+			<painFactor>0.5</painFactor>
+		</li>
+	</stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>BodyAugmentations</defName>
+    <label>body augmentations</label>
+    <labelNoun>several body augmentations</labelNoun>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.40</offset>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.40</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.20</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>0.10</offset>
+				</li>
+			</capMods>
+			<statOffsets>
+				<MeleeDodgeChance>28</MeleeDodgeChance>
+				<RangedShieldBlockChance>15</RangedShieldBlockChance>
+				<MeleeHitChance>4</MeleeHitChance>
+				<ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+				<HungerRateMultiplier>0.50</HungerRateMultiplier>
+				<BleedRate>-0.50</BleedRate>
+				<ToxicSensitivity>-0.20</ToxicSensitivity>
+			</statOffsets>
+		</li>
+	</stages>
+  </HediffDef>
+  -->
+  
+  		<!--
+		<mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.1</mtbDays>
+          </li>
+        </mentalStateGivers>
+		-->
+</Defs>
